@@ -1,0 +1,33 @@
+# AskUCP Agency
+
+> AI visibility and agentic commerce consulting for ecommerce stores.
+
+AskUCP Agency helps ecommerce teams become visible, cited, and ready for AI-driven discovery and buying flows.
+
+## Primary Pages
+
+- Home: https://askucp.agency/
+- FAQ: https://askucp.agency/faq
+
+## Topics
+
+- Generative Engine Optimization (GEO)
+- AI search optimization
+- Ecommerce AI visibility
+- llms.txt
+- Schema.org structured data
+- UCP
+- ACP
+- Agentic commerce readiness
+
+## Intended Audience
+
+- Ecommerce founders
+- Store owners
+- Growth leaders
+- Ecommerce operators
+- Developers working on store infrastructure
+
+## Contact
+
+- Email: kevin@100toolkit.com

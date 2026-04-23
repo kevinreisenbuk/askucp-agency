@@ -202,7 +202,7 @@ const content = {
     seo: {
       homeTitle: "AskUCP Agency | GEO ja AI‑valmidus e‑poodidele",
       homeDescription:
-        "AskUCP Agency aitab e‑poodidel saada AI jaoks nähtavaks, usaldusväärseks ja ostuvalmis GEO, skeemi, llms.txt ning agentse kaubanduse valmisoleku kaudu.",
+        "AskUCP Agency aitab e‑poodidel saada AI jaoks nähtavaks, usaldusväärseks ja ostuks valmis GEO, skeemi, llms.txt ning agentse kaubanduse valmisoleku kaudu.",
       faqTitle: "GEO ja agentse kaubanduse KKK | AskUCP Agency",
       faqDescription:
         "Vastused GEO, AI-otsingu optimeerimise, llms.txt, UCP, ACP ja agentse kaubanduse valmisoleku kohta e‑poodidele.",
@@ -231,7 +231,7 @@ const content = {
     },
     trustSignals: [
       "Shopify, WooCommerce, WordPress",
-      "Schema, llms.txt, UCP, ACP ja viitesignaalid",
+      "Schema, llms.txt, UCP, ACP ja viited",
       "Arendajale valmis koodijupid, mitte tühi strateegiajutt",
     ],
     failures: [
@@ -272,7 +272,7 @@ const content = {
       problemKicker: "Miks poed kaovad",
       problemTitle: "Sinu kataloog võib olemas olla, kuid AI-agent ei saa osta seda, millest ta aru ei saa.",
       solutionKicker: "Mida me teeme",
-      solutionTitle: "Muudame sinu poe selliseks, et AI saaks seda lugeda, sellele viidata, seda soovitada ja lõpuks ka sellest osta.",
+      solutionTitle: "Muudame sinu poe selliseks, et AI saaks sellest aru, seda soovitada ja ostuni viia.",
       timelineKicker: "Ajajoon",
       timelineTitle: "Tegutseda tuleb praegu.",
       timelineText: "AI-otsing mõjutab toodete leidmist juba täna. Järgmisena liigub ostuprotsess üha rohkem AI-agentide kätte.",
@@ -285,7 +285,7 @@ const content = {
     },
     timeline: [
       { window: "Täna", shift: "GEO jaoks optimeeritud poed jõuavad AI otsingumootoritesse." },
-      { window: "3–6 kuud", shift: "Apple Intelligence ja Gemini toovad ostlemise AI-vastustesse veel tugevamalt sisse." },
+      { window: "3–6 kuud", shift: "Apple Intelligence ja Gemini toovad ostlemise AI-vastustesse veel tugevamalt." },
       { window: "6–12 kuud", shift: "AI-agentide vahendatud ostuteekonnad liiguvad peavoolu." },
     ],
     form: {
@@ -312,7 +312,7 @@ const content = {
         email: "sina@ettevote.ee",
       },
       revenues: ["$0-$50k", "$50k-$250k", "$250k-$1M", "$1M+"],
-      platforms: ["Shopify", "WooCommerce", "WordPress", "Custom"],
+      platforms: ["Shopify", "WooCommerce", "WordPress", "Muu"],
     },
     faq: {
       asideTitle: "GEO ei ole enam ainult sisu.",
@@ -357,7 +357,7 @@ const content = {
         {
           question: "Kas see töötab Shopify, WooCommerce’i ja WordPressi poodidele?",
           answer:
-            "Jah. Audit arvestab platvormi eripäradega. Shopify poed vajavad sageli tooteandmete, skeemi, rakenduste ja AI jaoks loetava poevaate kontrolli. WooCommerce’i ja WordPressi poed vajavad tihti ligipääsetavuse, jõudluse, skeemi, arvustuste ja sisustruktuuri parandusi.",
+            "Jah. Audit arvestab platvormi eripäradega. Shopify poed vajavad sageli tooteandmete, skeemi, rakenduste ja AI jaoks loetava poevaate kontrolli. WooCommerce’i ja WordPressi poed vajavad tihti parandusi ligipääsetavuses, jõudluses, skeemis, arvustustes ja sisustruktuuris.",
         },
         {
           question: "Mis on llms.txt ja kas mu poel peaks see olema?",
@@ -456,6 +456,7 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
     const title = isFaq ? copy.seo.faqTitle : copy.seo.homeTitle;
     const description = isFaq ? copy.seo.faqDescription : copy.seo.homeDescription;
     const path = localizedPath(page, lang);
+    const pageUrl = `${siteUrl}${path}`;
 
     document.title = title;
     document.documentElement.lang = lang;
@@ -464,7 +465,7 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
     setMeta("og:title", title, "property");
     setMeta("og:description", description, "property");
     setMeta("og:type", "website", "property");
-    setMeta("og:url", `${siteUrl}${path}`, "property");
+    setMeta("og:url", pageUrl, "property");
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", title);
     setMeta("twitter:description", description);
@@ -481,12 +482,38 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
       description: copy.seo.orgDescription,
       areaServed: "Global",
       serviceType: "Generative Engine Optimization and agentic commerce readiness",
+      email: "kevin@100toolkit.com",
+    });
+
+    setJsonLd("website-schema", {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "AskUCP Agency",
+      url: siteUrl,
+      inLanguage: [lang === "et" ? "et-EE" : "en-US"],
+      description: copy.seo.homeDescription,
+    });
+
+    setJsonLd("webpage-schema", {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      url: pageUrl,
+      isPartOf: {
+        "@type": "WebSite",
+        name: "AskUCP Agency",
+        url: siteUrl,
+      },
+      inLanguage: lang === "et" ? "et-EE" : "en-US",
+      description,
     });
 
     if (isFaq) {
       setJsonLd("faq-schema", {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        url: pageUrl,
+        inLanguage: lang === "et" ? "et-EE" : "en-US",
         mainEntity: copy.faq.items.map((item) => ({
           "@type": "Question",
           name: item.question,
@@ -504,6 +531,8 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
         name: "AskUCP Agency",
         url: siteUrl,
         description,
+        areaServed: "Global",
+        inLanguage: lang === "et" ? "et-EE" : "en-US",
         serviceType: [
           "Generative Engine Optimization",
           "AI search optimization",
