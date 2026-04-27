@@ -37,25 +37,25 @@ const content = {
       solution: "Solution",
       timeline: "Timeline",
       faq: "FAQ",
-      cta: "Request AI Audit",
+      cta: "Apply for AI Audit",
     },
     hero: {
       title: "Make Your Store Agent-Ready.",
       subhead:
         "Most online stores are still invisible to AI. We help your products become visible, cited, and ready for AI-driven recommendations before your competitors catch up.",
-      proof: "Free first-pass review for ecommerce stores",
-      panelTitle: "A simple check for store owners",
+      proof: "Focused reviews for ecommerce teams",
+      panelTitle: "Your AI audit shows",
       checks: [
         "Can AI find your products?",
-        "Is your brand the top choice?",
-        "What’s blocking your traffic?",
+        "Where your store loses visibility",
+        "What your team should fix first",
       ],
-      panelCta: "Request AI Audit",
+      panelCta: "Apply for AI Audit",
     },
     trustSignals: [
-      "Shopify, WooCommerce, WordPress",
-      "Schema, llms.txt, UCP, ACP, citations",
-      "Dev-ready fixes, not strategy theatre",
+      { label: "Platforms", text: "Shopify, WooCommerce, WordPress" },
+      { label: "AI Surfaces", text: "ChatGPT, Perplexity, Gemini, Claude, and others" },
+      { label: "What You Get", text: "Visibility gaps, trust signals, priority fixes" },
     ],
     failures: [
       {
@@ -105,11 +105,17 @@ const content = {
       auditText:
         "Get a focused 30-day roadmap for making your store discoverable, citeable, and ready for AI-led checkout.",
       auditAssurance: "Response within 24 hours. No sales call unless we find a real agent-readiness gap.",
+      auditListTitle: "What happens next",
     },
     timeline: [
       { window: "Today", shift: "GEO-optimized stores appear in Perplexity and ChatGPT." },
       { window: "3-6 Months", shift: "Apple Intelligence and Gemini deepen shopping integration." },
       { window: "6-12 Months", shift: "Agentic checkout moves into mainstream commerce flows." },
+    ],
+    auditSteps: [
+      "We review AI visibility, product-page clarity, and technical blockers.",
+      "You get the highest-impact fixes in plain English.",
+      "Your team receives a focused 30-day roadmap to ship next.",
     ],
     form: {
       name: "Name",
@@ -214,25 +220,25 @@ const content = {
       solution: "Lahendus",
       timeline: "Ajajoon",
       faq: "KKK",
-      cta: "Küsi AI auditit",
+      cta: "Taotle AI auditit",
     },
     hero: {
       title: "Tee oma veebileht|AI jaoks|nähtavaks",
       subhead:
         "Enamik e‑poode on AI jaoks endiselt nähtamatud. Aitame muuta sinu tooted AI jaoks nähtavaks, usaldusväärseks ja soovitamiseks valmis enne, kui konkurendid järele jõuavad.",
-      proof: "Tasuta esmane ülevaade e‑poodidele",
-      panelTitle: "Lihtne kontroll poeomanikule",
+      proof: "Fookustatud ülevaade e‑kaubanduse tiimidele",
+      panelTitle: "See audit näitab",
       checks: [
         "Kas AI leiab su tooted üles?",
-        "Kas sinu bränd on esimene valik?",
-        "Mis pidurdab su liiklust?",
+        "Kus sinu pood nähtavust kaotab",
+        "Mida sinu tiim peaks esimesena parandama",
       ],
-      panelCta: "Küsi AI auditit",
+      panelCta: "Taotle AI auditit",
     },
     trustSignals: [
-      "Shopify, WooCommerce, WordPress",
-      "Schema, llms.txt, UCP, ACP ja viited",
-      "Arendajale valmis koodijupid, mitte tühi strateegiajutt",
+      { label: "Platvormid", text: "Shopify, WooCommerce, WordPress" },
+      { label: "AI kanalid", text: "ChatGPT, Perplexity, Gemini, Claude ja teised" },
+      { label: "Tulemus", text: "Nähtavuse lüngad, usaldussignaalid, prioriteetsed parandused" },
     ],
     failures: [
       {
@@ -282,11 +288,17 @@ const content = {
       auditText:
         "Saad selge 30 päeva tegevuskava, et muuta oma pood AI jaoks leitavaks, usaldusväärseks ja AI-juhitud ostuks valmis.",
       auditAssurance: "Vastame 24 tunni jooksul. Müügikõnet ei tule, kui me ei leia päris puudujääki.",
+      auditListTitle: "Mis juhtub edasi",
     },
     timeline: [
       { window: "Täna", shift: "GEO jaoks optimeeritud poed jõuavad AI otsingumootoritesse." },
       { window: "3–6 kuud", shift: "Apple Intelligence ja Gemini toovad ostlemise AI-vastustesse veel tugevamalt." },
       { window: "6–12 kuud", shift: "AI-agentide vahendatud ostuteekonnad liiguvad peavoolu." },
+    ],
+    auditSteps: [
+      "Vaatame üle AI nähtavuse, tootelehtede selguse ja tehnilised takistused.",
+      "Saad kõige suurema mõjuga parandused selges keeles.",
+      "Sinu tiim saab konkreetse 30 päeva tegevuskava, mida järgmisena ellu viia.",
     ],
     form: {
       name: "Nimi",
@@ -297,7 +309,7 @@ const content = {
       email: "E-post",
       platform: "Platvorm",
       platformPlaceholder: "Vali platvorm",
-      submit: "Küsi AI auditit",
+      submit: "Taotle AI auditit",
       privacy: "Sinu URL-i kasutatakse ainult auditi ettevalmistamiseks.",
       statusSubmitting: "Saadan auditipäringut...",
       statusSuccess: "Auditipäring on käes. Vaatame poe üle ja vastame 24 tunni jooksul.",
@@ -680,6 +692,13 @@ function App() {
       </header>
 
       <section className="hero" id="top">
+        <div className="hero-backdrop" aria-hidden="true">
+          <span className="hero-grid" />
+          <span className="hero-orbit hero-orbit-one" />
+          <span className="hero-orbit hero-orbit-two" />
+          <span className="hero-signal hero-signal-one" />
+          <span className="hero-signal hero-signal-two" />
+        </div>
         <div className="hero-content">
           <h1>
             {copy.hero.title.split("|").map((part, index, parts) => (
@@ -723,9 +742,9 @@ function App() {
 
       <section className="proof-strip" aria-label="Trust signals">
         {copy.trustSignals.map((signal) => (
-          <div className="proof-item" key={signal}>
-            <CheckCircle2 size={18} />
-            <span>{signal}</span>
+          <div className="proof-item" key={signal.text}>
+            <span className="proof-label">{signal.label}</span>
+            <strong>{signal.text}</strong>
           </div>
         ))}
       </section>
@@ -797,6 +816,17 @@ function App() {
           <div className="form-assurance">
             <LockKeyhole size={18} />
             <span>{copy.sections.auditAssurance}</span>
+          </div>
+          <div className="audit-steps-card">
+            <div className="audit-steps-title">{copy.sections.auditListTitle}</div>
+            <ul className="audit-steps">
+              {copy.auditSteps.map((item) => (
+                <li key={item}>
+                  <CheckCircle2 size={18} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <form className="lead-form" onSubmit={handleAuditSubmit}>
