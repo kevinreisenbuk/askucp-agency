@@ -50,17 +50,17 @@ const content = {
       title: "Make Your Store Agent-Ready.",
       subhead:
         "Most online stores are still invisible to AI. We help your products become visible, cited, and ready for AI-driven recommendations before your competitors catch up.",
-      proof: "Focused reviews for ecommerce teams",
       panelTitle: "Your AI audit shows",
+      panelMeta: "Signal scan",
       checks: [
         "Can AI find your products?",
-        "Where your store loses visibility",
-        "What your team should fix first",
+        "Specific blind spots in AI search",
+        "An actionable plan to increase visibility",
       ],
       panelCta: "Apply for AI Audit",
     },
     trustSignals: [
-      { label: "Platforms", text: "Shopify, WooCommerce, WordPress" },
+      { label: "Platforms", text: "Shopify, WooCommerce, WordPress, and custom websites" },
       { label: "AI Surfaces", text: "ChatGPT, Perplexity, Gemini, Claude, and others" },
       { label: "What You Get", text: "Visibility gaps, trust signals, priority fixes" },
     ],
@@ -115,7 +115,7 @@ const content = {
       auditListTitle: "What happens next",
     },
     timeline: [
-      { window: "Today", shift: "GEO-optimized stores appear in Perplexity and ChatGPT." },
+      { window: "Today", shift: "GEO-optimized stores appear in AI tools like ChatGPT, Gemini, and others." },
       { window: "3-6 Months", shift: "Apple Intelligence and Gemini deepen shopping integration." },
       { window: "6-12 Months", shift: "Agentic checkout moves into mainstream commerce flows." },
     ],
@@ -328,17 +328,17 @@ const content = {
       title: "Tee oma veebileht|AI jaoks|nähtavaks",
       subhead:
         "Enamik e‑poode on AI jaoks endiselt nähtamatud. Aitame muuta sinu tooted AI jaoks nähtavaks, usaldusväärseks ja soovitamiseks valmis enne, kui konkurendid järele jõuavad.",
-      proof: "Fookustatud ülevaade e‑kaubanduse tiimidele",
       panelTitle: "See audit näitab",
+      panelMeta: "Signaalide skaneering",
       checks: [
         "Kas AI leiab su tooted üles?",
-        "Kus sinu pood nähtavust kaotab",
-        "Mida sinu tiim peaks esimesena parandama",
+        "Konkreetsed pimedad kohad AI-otsingus",
+        "Selge tegevusplaan nähtavuse kasvatamiseks",
       ],
       panelCta: "Taotle AI auditit",
     },
     trustSignals: [
-      { label: "Platvormid", text: "Shopify, WooCommerce, WordPress" },
+      { label: "Platvormid", text: "Shopify, WooCommerce, WordPress ja kohandatud veebilehed" },
       { label: "AI kanalid", text: "ChatGPT, Perplexity, Gemini, Claude ja teised" },
       { label: "Tulemus", text: "Nähtavuse lüngad, usaldussignaalid, prioriteetsed parandused" },
     ],
@@ -393,7 +393,7 @@ const content = {
       auditListTitle: "Mis juhtub edasi",
     },
     timeline: [
-      { window: "Täna", shift: "GEO jaoks optimeeritud poed jõuavad AI otsingumootoritesse." },
+      { window: "Täna", shift: "GEO jaoks optimeeritud poed jõuavad AI tööriistadesse nagu ChatGPT, Gemini ja teised." },
       { window: "3–6 kuud", shift: "Apple Intelligence ja Gemini toovad ostlemise AI-vastustesse veel tugevamalt." },
       { window: "6–12 kuud", shift: "AI-agentide vahendatud ostuteekonnad liiguvad peavoolu." },
     ],
@@ -979,20 +979,18 @@ function App() {
               {copy.nav.cta}
               <ArrowRight size={20} />
             </a>
-            <span className="micro-proof">
-              <Sparkles size={16} />
-              {copy.hero.proof}
-            </span>
           </div>
         </div>
 
         <div className="audit-preview" aria-label="Agentic audit deliverables preview">
           <div className="visual-header">
             <span>{copy.hero.panelTitle}</span>
+            <span className="visual-meta">{copy.hero.panelMeta}</span>
           </div>
           <ul className="audit-checklist">
-            {copy.hero.checks.map((item) => (
+            {copy.hero.checks.map((item, index) => (
               <li key={item}>
+                <span className="audit-index">0{index + 1}</span>
                 <CheckCircle2 size={18} />
                 <span>{item}</span>
               </li>
@@ -1008,6 +1006,7 @@ function App() {
       <section className="proof-strip" aria-label="Trust signals">
         {copy.trustSignals.map((signal) => (
           <div className="proof-item" key={signal.text}>
+            <span className="proof-node" aria-hidden="true" />
             <span className="proof-label">{signal.label}</span>
             <strong>{signal.text}</strong>
           </div>
@@ -1054,22 +1053,22 @@ function App() {
       </section>
 
       <section className="deliverables-section" id="timeline">
-        <div>
+        <div className="timeline-copy">
           <div className="section-kicker">{copy.sections.timelineKicker}</div>
           <h2>{copy.sections.timelineTitle}</h2>
           <p>{copy.sections.timelineText}</p>
-        </div>
-        <div className="clean-list">
-          {copy.timeline.map((item) => (
-            <div className="clean-list-row" key={item.window}>
-              <span>{item.window}</span>
-              <p>{item.shift}</p>
-            </div>
-          ))}
           <div className="clean-fact">
             <Zap size={18} />
             <strong>{copy.sections.timelineFact}</strong>
           </div>
+        </div>
+        <div className="timeline-grid">
+          {copy.timeline.map((item) => (
+            <article className="timeline-card" key={item.window}>
+              <span>{item.window}</span>
+              <p>{item.shift}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -1267,16 +1266,14 @@ function Footer({ lang }: { lang: Lang }) {
   const copy = content[lang];
   return (
     <footer className="site-footer">
-      <div>
-        <a className="brand" href={localizedPath("home", lang)} aria-label="AskUCP Agency home">
+      <div className="footer-brand-block">
+        <a className="brand footer-brand" href={localizedPath("home", lang)} aria-label="AskUCP Agency home">
           <span>AskUCP Agency</span>
         </a>
         <p>{copy.footer.tagline}</p>
       </div>
       <nav aria-label="Footer navigation">
-        <a href={`${localizedPath("home", lang)}#problem`}>{copy.nav.problem}</a>
         <a href={`${localizedPath("home", lang)}#solution`}>{copy.nav.solution}</a>
-        <a href={localizedPath("faq", lang)}>{copy.nav.faq}</a>
         <a href={localizedPath("privacy", lang)}>{copy.footer.privacy}</a>
         <a href={localizedPath("terms", lang)}>{copy.footer.terms}</a>
         <a href={`${localizedPath("home", lang)}#audit`}>{copy.nav.cta}</a>
