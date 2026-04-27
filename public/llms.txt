@@ -8,6 +8,8 @@ AskUCP Agency helps ecommerce teams become visible, cited, and ready for AI-driv
 
 - Home: https://askucp.agency/
 - FAQ: https://askucp.agency/faq
+- Privacy Policy: https://askucp.agency/privacy
+- Terms of Service: https://askucp.agency/terms
 
 ## Topics
 

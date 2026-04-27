@@ -11,13 +11,33 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://askucp.agency/?lang=et</loc>
+    <loc>https://askucp.agency/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://askucp.agency/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://askucp.agency/et/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://askucp.agency/faq?lang=et</loc>
+    <loc>https://askucp.agency/et/faq</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://askucp.agency/et/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://askucp.agency/et/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

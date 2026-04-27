@@ -9,6 +9,12 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         faq: resolve(__dirname, "faq.html"),
+        privacy: resolve(__dirname, "privacy.html"),
+        terms: resolve(__dirname, "terms.html"),
+        etMain: resolve(__dirname, "et/index.html"),
+        etFaq: resolve(__dirname, "et/faq.html"),
+        etPrivacy: resolve(__dirname, "et/privacy.html"),
+        etTerms: resolve(__dirname, "et/terms.html"),
       },
     },
   },

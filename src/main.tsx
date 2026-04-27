@@ -19,18 +19,25 @@ const siteUrl = "https://askucp.agency";
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 type Lang = "en" | "et";
+type Page = "home" | "faq" | "privacy" | "terms";
 
 const content = {
   en: {
     seo: {
-      homeTitle: "AskUCP Agency | Agent-Ready GEO Consulting",
+      homeTitle: "AI Search Optimization for Ecommerce | AskUCP Agency",
       homeDescription:
-        "AskUCP Agency helps ecommerce stores become visible, cited, and purchasable by AI agents through GEO, UCP, ACP, schema, and llms.txt consulting.",
-      faqTitle: "GEO & Agentic Commerce FAQ | AskUCP Agency",
+        "AskUCP Agency helps ecommerce stores improve AI search visibility with GEO, llms.txt, schema, UCP, ACP, and agentic commerce readiness consulting.",
+      faqTitle: "Ecommerce GEO FAQ | AI Search Optimization | AskUCP Agency",
       faqDescription:
-        "Answers about GEO, AI search optimization, llms.txt, UCP, ACP, and agentic commerce readiness for ecommerce stores.",
+        "Practical answers about ecommerce GEO, AI search optimization, llms.txt, schema, UCP, ACP, and agentic commerce readiness.",
+      privacyTitle: "Privacy Policy | AskUCP Agency",
+      privacyDescription:
+        "How AskUCP Agency collects, uses, stores, and protects information submitted through this website.",
+      termsTitle: "Terms of Service | AskUCP Agency",
+      termsDescription:
+        "Basic terms governing the use of the AskUCP Agency website and audit request form.",
       orgDescription:
-        "GEO and agentic commerce consulting agency for ecommerce stores preparing for AI search, UCP, ACP, schema, and llms.txt.",
+        "AI search optimization and agentic commerce consulting for ecommerce stores preparing for GEO, schema, llms.txt, UCP, and ACP.",
     },
     nav: {
       problem: "Problem",
@@ -202,18 +209,113 @@ const content = {
     },
     footer: {
       tagline: "AI visibility for ecommerce.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+    },
+    legal: {
+      updated: "Effective date: April 27, 2026",
+      privacy: {
+        title: "Privacy Policy",
+        intro:
+          "This Privacy Policy explains how AskUCP Agency collects, uses, and protects information submitted through this website.",
+        sections: [
+          {
+            heading: "Information we collect",
+            body:
+              "When you submit an audit request, we may collect your name, company URL, monthly revenue range, email address, and platform information. We may also receive basic technical data such as IP address, browser type, device data, and server logs from our hosting and infrastructure providers.",
+          },
+          {
+            heading: "How we use information",
+            body:
+              "We use the information you submit to review your store, respond to your request, communicate about our services, improve our site, and maintain the security and operation of the website.",
+          },
+          {
+            heading: "How information is stored and shared",
+            body:
+              "Form submissions are stored using third-party infrastructure providers that help us host the site and process requests, including Supabase and Netlify. We do not sell personal information. We may share information with service providers that support hosting, storage, security, analytics, or communications, and when required by law.",
+          },
+          {
+            heading: "Data retention",
+            body:
+              "We keep submitted information for as long as reasonably necessary to respond to requests, manage business records, improve our services, and meet legal or security obligations.",
+          },
+          {
+            heading: "Your choices",
+            body:
+              "You may contact us to request access to, correction of, or deletion of information you have submitted, subject to applicable legal and operational limits. If you do not want us to use your information for follow-up communications, you can tell us at any time.",
+          },
+          {
+            heading: "Children",
+            body:
+              "This website is intended for business users and is not directed to children under 13.",
+          },
+          {
+            heading: "Changes and contact",
+            body:
+              "We may update this Privacy Policy from time to time. Questions or requests can be sent to kevin@100toolkit.com.",
+          },
+        ],
+      },
+      terms: {
+        title: "Terms of Service",
+        intro:
+          "These Terms of Service govern your use of the AskUCP Agency website and any request you submit through it.",
+        sections: [
+          {
+            heading: "Website use",
+            body:
+              "You may use this website only for lawful business purposes. You agree not to misuse the site, interfere with its operation, attempt unauthorized access, or submit false, harmful, or misleading information.",
+          },
+          {
+            heading: "Informational content",
+            body:
+              "Content on this website is provided for general informational purposes. It does not constitute legal, financial, or other regulated professional advice.",
+          },
+          {
+            heading: "Audit requests and services",
+            body:
+              "Submitting an audit request does not create a client relationship by itself and does not guarantee that AskUCP Agency will accept the engagement, provide services, or deliver a specific commercial outcome.",
+          },
+          {
+            heading: "Intellectual property",
+            body:
+              "The website content, branding, copy, and materials on this site are owned by or licensed to AskUCP Agency unless stated otherwise. You may not reproduce, republish, or commercially use them without permission.",
+          },
+          {
+            heading: "Third-party services",
+            body:
+              "This website may rely on or link to third-party tools, platforms, and websites. Their availability, content, and privacy practices are outside our direct control.",
+          },
+          {
+            heading: "No warranties and liability limits",
+            body:
+              "This website and its content are provided on an as-is basis to the extent permitted by law. AskUCP Agency disclaims warranties of availability, accuracy, and fitness for a particular purpose, and is not liable for indirect or consequential losses arising from use of the site.",
+          },
+          {
+            heading: "Changes and contact",
+            body:
+              "We may update these Terms of Service from time to time. Questions can be sent to kevin@100toolkit.com.",
+          },
+        ],
+      },
     },
   },
   et: {
     seo: {
-      homeTitle: "AskUCP Agency | GEO ja AI‑valmidus e‑poodidele",
+      homeTitle: "AI-otsingu optimeerimine e-poodidele | AskUCP Agency",
       homeDescription:
-        "AskUCP Agency aitab e‑poodidel saada AI jaoks nähtavaks, usaldusväärseks ja ostuks valmis GEO, skeemi, llms.txt ning agentse kaubanduse valmisoleku kaudu.",
-      faqTitle: "GEO ja agentse kaubanduse KKK | AskUCP Agency",
+        "AskUCP Agency aitab e-poodidel parandada AI-otsingu nähtavust GEO, skeemi, llms.txt ning agentse kaubanduse valmisoleku kaudu.",
+      faqTitle: "GEO KKK e-poodidele | AI-otsingu optimeerimine | AskUCP Agency",
       faqDescription:
-        "Vastused GEO, AI-otsingu optimeerimise, llms.txt, UCP, ACP ja agentse kaubanduse valmisoleku kohta e‑poodidele.",
+        "Praktilised vastused GEO, AI-otsingu optimeerimise, llms.txt, skeemi, UCP, ACP ja agentse kaubanduse valmisoleku kohta.",
+      privacyTitle: "Privaatsuspoliitika | AskUCP Agency",
+      privacyDescription:
+        "Kuidas AskUCP Agency kogub, kasutab, säilitab ja kaitseb selle veebilehe kaudu saadetud andmeid.",
+      termsTitle: "Kasutustingimused | AskUCP Agency",
+      termsDescription:
+        "Põhitingimused, mis reguleerivad AskUCP Agency veebilehe ja auditivormi kasutamist.",
       orgDescription:
-        "GEO ja agentse kaubanduse konsultatsioon e‑poodidele, kes valmistuvad AI-otsinguks, UCP-ks, ACP-ks, skeemiks ja llms.txt-ks.",
+        "AI-otsingu optimeerimise ja agentse kaubanduse konsultatsioon e-poodidele, kes valmistuvad GEO-ks, skeemiks, llms.txt-ks, UCP-ks ja ACP-ks.",
     },
     nav: {
       problem: "Probleem",
@@ -385,6 +487,95 @@ const content = {
     },
     footer: {
       tagline: "AI nähtavus e‑poodidele.",
+      privacy: "Privaatsuspoliitika",
+      terms: "Kasutustingimused",
+    },
+    legal: {
+      updated: "Jõustumiskuupäev: 27. aprill 2026",
+      privacy: {
+        title: "Privaatsuspoliitika",
+        intro:
+          "See privaatsuspoliitika selgitab, kuidas AskUCP Agency kogub, kasutab ja kaitseb selle veebilehe kaudu saadetud andmeid.",
+        sections: [
+          {
+            heading: "Milliseid andmeid me kogume",
+            body:
+              "Kui saadad auditipäringu, võime koguda sinu nime, ettevõtte URL-i, kuise käibe vahemiku, e-posti aadressi ja platvormi info. Lisaks võivad meie majutus- ja taristuteenuse pakkujad saada tehnilisi andmeid, nagu IP-aadress, brauseri tüüp, seadme info ja serverilogid.",
+          },
+          {
+            heading: "Kuidas me andmeid kasutame",
+            body:
+              "Kasutame sinu saadetud andmeid poe ülevaatamiseks, päringule vastamiseks, teenustega seotud suhtluseks, veebilehe arendamiseks ning saidi turvalisuse ja töökindluse hoidmiseks.",
+          },
+          {
+            heading: "Kuidas andmeid säilitatakse ja jagatakse",
+            body:
+              "Vormipäringuid hoitakse kolmandate osapoolte taristuteenustes, mis aitavad meil veebilehte majutada ja päringuid töödelda, sealhulgas Supabase'is ja Netlifys. Me ei müü isikuandmeid. Võime andmeid jagada teenusepakkujatega, kes toetavad majutust, salvestust, turvet, analüütikat või suhtlust, ning juhul, kui seadus seda nõuab.",
+          },
+          {
+            heading: "Andmete säilitamine",
+            body:
+              "Hoiame saadetud andmeid nii kaua, kui see on mõistlikult vajalik päringutele vastamiseks, äriliste dokumentide haldamiseks, teenuste parendamiseks ning õiguslike või turvalisusega seotud kohustuste täitmiseks.",
+          },
+          {
+            heading: "Sinu valikud",
+            body:
+              "Soovi korral võid võtta meiega ühendust, et küsida enda saadetud andmetele ligipääsu, nende parandamist või kustutamist, arvestades kohalduvaid õiguslikke ja praktilisi piiranguid. Kui sa ei soovi järelkontakteerumist, võid meile sellest igal ajal teada anda.",
+          },
+          {
+            heading: "Lapsed",
+            body:
+              "See veebileht on mõeldud ärikasutajatele ega ole suunatud alla 13-aastastele lastele.",
+          },
+          {
+            heading: "Muudatused ja kontakt",
+            body:
+              "Võime seda privaatsuspoliitikat aeg-ajalt uuendada. Küsimused ja päringud võib saata aadressile kevin@100toolkit.com.",
+          },
+        ],
+      },
+      terms: {
+        title: "Kasutustingimused",
+        intro:
+          "Need kasutustingimused reguleerivad AskUCP Agency veebilehe kasutamist ja selle kaudu esitatud päringuid.",
+        sections: [
+          {
+            heading: "Veebilehe kasutamine",
+            body:
+              "Võid seda veebilehte kasutada ainult seaduslikel ärilistel eesmärkidel. Sa ei tohi veebilehte kuritarvitada, selle tööd häirida, proovida saada loata ligipääsu ega saata vale-, kahjulikku või eksitavat infot.",
+          },
+          {
+            heading: "Informatiivne sisu",
+            body:
+              "Sellel veebilehel olev sisu on mõeldud üldiseks teabeks. See ei kujuta endast õigusnõu, finantsnõu ega muud reguleeritud kutsealast nõustamist.",
+          },
+          {
+            heading: "Auditipäringud ja teenused",
+            body:
+              "Auditipäringu esitamine ei loo iseenesest kliendisuhet ega taga, et AskUCP Agency võtab töö vastu, osutab teenust või saavutab konkreetse ärilise tulemuse.",
+          },
+          {
+            heading: "Intellektuaalomand",
+            body:
+              "Selle veebilehe sisu, bränd, tekstid ja materjalid kuuluvad AskUCP Agencyle või on sellele litsentseeritud, kui pole märgitud teisiti. Neid ei tohi ilma loata kopeerida, uuesti avaldada ega äriliselt kasutada.",
+          },
+          {
+            heading: "Kolmandate osapoolte teenused",
+            body:
+              "See veebileht võib kasutada kolmandate osapoolte tööriistu, platvorme ja veebilehti või neile viidata. Nende kättesaadavus, sisu ja privaatsustavad ei ole meie otsese kontrolli all.",
+          },
+          {
+            heading: "Garantii puudumine ja vastutuse piirang",
+            body:
+              "See veebileht ja selle sisu on lubatud ulatuses esitatud olemasoleval kujul. AskUCP Agency ei anna garantiid kättesaadavuse, täpsuse ega kindlaks eesmärgiks sobivuse kohta ega vastuta veebilehe kasutamisest tulenevate kaudsete või kaasnevate kahjude eest.",
+          },
+          {
+            heading: "Muudatused ja kontakt",
+            body:
+              "Võime neid kasutustingimusi aeg-ajalt uuendada. Küsimused võib saata aadressile kevin@100toolkit.com.",
+          },
+        ],
+      },
     },
   },
 } as const;
@@ -432,6 +623,9 @@ function setJsonLd(id: string, data: object) {
 }
 
 function getInitialLang(): Lang {
+  if (window.location.pathname === "/et" || window.location.pathname.startsWith("/et/")) {
+    return "et";
+  }
   const searchLang = new URLSearchParams(window.location.search).get("lang");
   if (searchLang === "et" || searchLang === "en") {
     return searchLang;
@@ -443,9 +637,31 @@ function getInitialLang(): Lang {
   return "en";
 }
 
-function localizedPath(page: "home" | "faq", lang: Lang) {
-  const base = page === "faq" ? "/faq" : "/";
-  return lang === "et" ? `${base}?lang=et` : base;
+function resolvePage(pathname: string): Page {
+  const normalized = pathname.replace(/\/+$/, "") || "/";
+  const stripped = normalized === "/et" ? "/" : normalized.replace(/^\/et(?=\/|$)/, "") || "/";
+  if (stripped === "/faq" || stripped === "/faq.html") {
+    return "faq";
+  }
+  if (stripped === "/privacy" || stripped === "/privacy.html") {
+    return "privacy";
+  }
+  if (stripped === "/terms" || stripped === "/terms.html") {
+    return "terms";
+  }
+  return "home";
+}
+
+function localizedPath(page: Page, lang: Lang) {
+  const base =
+    page === "faq" ? "/faq" :
+    page === "privacy" ? "/privacy" :
+    page === "terms" ? "/terms" :
+    "/";
+  if (lang === "et") {
+    return base === "/" ? "/et/" : `/et${base}`;
+  }
+  return base;
 }
 
 function LanguageSwitch({ lang, onChange }: { lang: Lang; onChange: (lang: Lang) => void }) {
@@ -461,12 +677,22 @@ function LanguageSwitch({ lang, onChange }: { lang: Lang; onChange: (lang: Lang)
   );
 }
 
-function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
+function SeoHead({ page, lang }: { page: Page; lang: Lang }) {
   React.useEffect(() => {
     const isFaq = page === "faq";
+    const isPrivacy = page === "privacy";
+    const isTerms = page === "terms";
     const copy = content[lang];
-    const title = isFaq ? copy.seo.faqTitle : copy.seo.homeTitle;
-    const description = isFaq ? copy.seo.faqDescription : copy.seo.homeDescription;
+    const title =
+      isFaq ? copy.seo.faqTitle :
+      isPrivacy ? copy.seo.privacyTitle :
+      isTerms ? copy.seo.termsTitle :
+      copy.seo.homeTitle;
+    const description =
+      isFaq ? copy.seo.faqDescription :
+      isPrivacy ? copy.seo.privacyDescription :
+      isTerms ? copy.seo.termsDescription :
+      copy.seo.homeDescription;
     const path = localizedPath(page, lang);
     const pageUrl = `${siteUrl}${path}`;
 
@@ -483,8 +709,8 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
     setMeta("twitter:description", description);
     setCanonical(path);
     setAlternate("x-default", `${siteUrl}${localizedPath(page, "en")}`);
-    setAlternate("en", `${siteUrl}${localizedPath(page, "en")}`);
-    setAlternate("et", `${siteUrl}${localizedPath(page, "et")}`);
+    setAlternate("en-US", `${siteUrl}${localizedPath(page, "en")}`);
+    setAlternate("et-EE", `${siteUrl}${localizedPath(page, "et")}`);
 
     setJsonLd("organization-schema", {
       "@context": "https://schema.org",
@@ -495,6 +721,23 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
       areaServed: "Global",
       serviceType: "Generative Engine Optimization and agentic commerce readiness",
       email: "kevin@100toolkit.com",
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          email: "kevin@100toolkit.com",
+          availableLanguage: ["en", "et"],
+        },
+      ],
+      knowsAbout: [
+        "AI search optimization",
+        "Generative Engine Optimization",
+        "Ecommerce technical SEO",
+        "llms.txt",
+        "Schema.org",
+        "UCP",
+        "ACP",
+      ],
     });
 
     setJsonLd("website-schema", {
@@ -520,6 +763,27 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
       description,
     });
 
+    setJsonLd("breadcrumb-schema", {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "AskUCP Agency",
+          item: `${siteUrl}${localizedPath("home", lang)}`,
+        },
+        ...(page === "home"
+          ? []
+          : [{
+              "@type": "ListItem",
+              position: 2,
+              name: title.replace(" | AskUCP Agency", ""),
+              item: pageUrl,
+            }]),
+      ],
+    });
+
     if (isFaq) {
       setJsonLd("faq-schema", {
         "@context": "https://schema.org",
@@ -537,21 +801,25 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
       });
     } else {
       document.getElementById("faq-schema")?.remove();
-      setJsonLd("service-schema", {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        name: "AskUCP Agency",
-        url: siteUrl,
-        description,
-        areaServed: "Global",
-        inLanguage: lang === "et" ? "et-EE" : "en-US",
-        serviceType: [
-          "Generative Engine Optimization",
-          "AI search optimization",
-          "Agentic commerce readiness",
-          "Ecommerce technical SEO",
-        ],
-      });
+      if (page === "home") {
+        setJsonLd("service-schema", {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "AskUCP Agency",
+          url: siteUrl,
+          description,
+          areaServed: "Global",
+          inLanguage: lang === "et" ? "et-EE" : "en-US",
+          serviceType: [
+            "Generative Engine Optimization",
+            "AI search optimization",
+            "Agentic commerce readiness",
+            "Ecommerce technical SEO",
+          ],
+        });
+      } else {
+        document.getElementById("service-schema")?.remove();
+      }
     }
   }, [lang, page]);
 
@@ -559,10 +827,7 @@ function SeoHead({ page, lang }: { page: "home" | "faq"; lang: Lang }) {
 }
 
 function App() {
-  const isFaq =
-    window.location.pathname === "/faq" ||
-    window.location.pathname === "/faq/" ||
-    window.location.pathname === "/faq.html";
+  const page = resolvePage(window.location.pathname);
   const [lang, setLang] = React.useState<Lang>(getInitialLang);
   const [formData, setFormData] = React.useState({
     name: "",
@@ -575,17 +840,17 @@ function App() {
   const copy = content[lang];
 
   React.useEffect(() => {
-    const url = new URL(window.location.href);
-    if (lang === "et") {
-      url.searchParams.set("lang", "et");
-    } else {
-      url.searchParams.delete("lang");
-    }
-    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
-  }, [lang]);
+    window.history.replaceState({}, "", `${localizedPath(page, lang)}${window.location.hash}`);
+  }, [lang, page]);
 
-  if (isFaq) {
+  if (page === "faq") {
     return <FaqPage lang={lang} setLang={setLang} />;
+  }
+  if (page === "privacy") {
+    return <LegalPage lang={lang} setLang={setLang} type="privacy" />;
+  }
+  if (page === "terms") {
+    return <LegalPage lang={lang} setLang={setLang} type="terms" />;
   }
 
   function updateFormField(field: keyof typeof formData, value: string) {
@@ -948,6 +1213,56 @@ function FaqPage({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void 
   );
 }
 
+function LegalPage({
+  lang,
+  setLang,
+  type,
+}: {
+  lang: Lang;
+  setLang: (lang: Lang) => void;
+  type: "privacy" | "terms";
+}) {
+  const copy = content[lang];
+  const legal = copy.legal[type];
+
+  return (
+    <main className="site-shell">
+      <SeoHead page={type} lang={lang} />
+      <header className="nav">
+        <a className="brand" href={localizedPath("home", lang)} aria-label="AskUCP Agency home">
+          <span>AskUCP Agency</span>
+        </a>
+        <nav className="nav-links" aria-label="Primary navigation">
+          <a href={`${localizedPath("home", lang)}#problem`}>{copy.nav.problem}</a>
+          <a href={`${localizedPath("home", lang)}#solution`}>{copy.nav.solution}</a>
+          <a href={localizedPath("faq", lang)}>{copy.nav.faq}</a>
+        </nav>
+        <LanguageSwitch lang={lang} onChange={setLang} />
+        <a className="nav-cta" href={`${localizedPath("home", lang)}#audit`}>
+          {copy.nav.cta}
+        </a>
+      </header>
+
+      <section className="legal-layout" aria-label={legal.title}>
+        <div className="legal-header">
+          <h1>{legal.title}</h1>
+          <p className="legal-updated">{copy.legal.updated}</p>
+          <p className="legal-intro">{legal.intro}</p>
+        </div>
+        <div className="legal-list">
+          {legal.sections.map((section) => (
+            <article className="legal-item" key={section.heading}>
+              <h2>{section.heading}</h2>
+              <p>{section.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <Footer lang={lang} />
+    </main>
+  );
+}
+
 function Footer({ lang }: { lang: Lang }) {
   const copy = content[lang];
   return (
@@ -962,6 +1277,8 @@ function Footer({ lang }: { lang: Lang }) {
         <a href={`${localizedPath("home", lang)}#problem`}>{copy.nav.problem}</a>
         <a href={`${localizedPath("home", lang)}#solution`}>{copy.nav.solution}</a>
         <a href={localizedPath("faq", lang)}>{copy.nav.faq}</a>
+        <a href={localizedPath("privacy", lang)}>{copy.footer.privacy}</a>
+        <a href={localizedPath("terms", lang)}>{copy.footer.terms}</a>
         <a href={`${localizedPath("home", lang)}#audit`}>{copy.nav.cta}</a>
       </nav>
     </footer>
