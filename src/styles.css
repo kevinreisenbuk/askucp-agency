@@ -1054,7 +1054,8 @@ h3 {
   }
 
   .hero {
-    padding: 24px 0 44px;
+    gap: 24px;
+    padding: 18px 0 34px;
   }
 
   .hero-backdrop {
@@ -1072,9 +1073,14 @@ h3 {
   }
 
   .hero-subhead {
-    margin-top: 20px;
-    font-size: 1rem;
-    line-height: 1.5;
+    margin-top: 16px;
+    font-size: 0.98rem;
+    line-height: 1.46;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+    gap: 12px;
   }
 
   .primary-button {
@@ -1085,7 +1091,7 @@ h3 {
   .audit-preview,
   .feature-card,
   .lead-form {
-    padding: 18px;
+    padding: 16px;
   }
 
   .audit-steps-card,
@@ -1093,31 +1099,122 @@ h3 {
     padding: 16px;
   }
 
+  .visual-header {
+    font-size: 0.86rem;
+  }
+
+  .visual-meta {
+    font-size: 0.68rem;
+  }
+
+  .audit-checklist {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .audit-checklist li {
+    gap: 10px;
+    padding-bottom: 12px;
+    font-size: 0.96rem;
+    line-height: 1.36;
+  }
+
+  .audit-index {
+    min-width: 24px;
+    font-size: 0.68rem;
+  }
+
   .proof-strip {
     gap: 12px;
+    padding-top: 16px;
   }
 
   .section,
   .deliverables-section {
-    padding: 54px 0;
+    padding: 46px 0;
   }
 
-  .clean-list-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
+  .section-kicker {
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .proof-item {
+    gap: 6px;
+  }
+
+  .proof-item strong {
+    font-size: 0.92rem;
+    line-height: 1.42;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .feature-card svg {
+    margin-bottom: 18px;
+  }
+
+  .timeline-copy h2 + p {
+    margin-top: 16px;
+  }
+
+  .timeline-grid {
+    gap: 12px;
+  }
+
+  .timeline-card {
+    padding: 16px;
+  }
+
+  .timeline-card span {
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+  }
+
+  .clean-fact {
+    margin-top: 18px;
+    font-size: 0.94rem;
   }
 
   .audit-section {
-    gap: 28px;
-    padding: 60px 0 74px;
+    gap: 22px;
+    padding: 52px 0 64px;
+  }
+
+  .audit-copy h2 {
+    margin-bottom: 14px;
+  }
+
+  .form-assurance {
+    margin-top: 18px;
+    font-size: 0.94rem;
+    line-height: 1.42;
+  }
+
+  .audit-steps-card {
+    margin-top: 20px;
+  }
+
+  .audit-steps {
+    gap: 12px;
   }
 
   .site-footer {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 28px 0 34px;
   }
 
   .site-footer nav {
     justify-content: flex-start;
+    gap: 10px 14px;
   }
 
   .faq-item {

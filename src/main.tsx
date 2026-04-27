@@ -1276,7 +1276,6 @@ function Footer({ lang }: { lang: Lang }) {
         <a href={`${localizedPath("home", lang)}#solution`}>{copy.nav.solution}</a>
         <a href={localizedPath("privacy", lang)}>{copy.footer.privacy}</a>
         <a href={localizedPath("terms", lang)}>{copy.footer.terms}</a>
-        <a href={`${localizedPath("home", lang)}#audit`}>{copy.nav.cta}</a>
       </nav>
     </footer>
   );
