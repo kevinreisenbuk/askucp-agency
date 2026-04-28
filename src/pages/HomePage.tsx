@@ -135,6 +135,22 @@ export function HomePage({
         </div>
       </section>
 
+      <section className="about-strip" aria-label="AskUCP credibility">
+        <div className="about-copy">
+          <div className="section-kicker">{copy.about.kicker}</div>
+          <h2>{copy.about.title}</h2>
+          <p>{copy.about.text}</p>
+        </div>
+        <ul className="about-points">
+          {copy.about.points.map((point) => (
+            <li key={point}>
+              <CheckCircle2 size={18} />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <AuditForm copy={copy} />
       <Footer lang={lang} />
     </main>

@@ -35,7 +35,7 @@ export const content = {
     hero: {
       title: "Make Your Store Agent-Ready.",
       subhead:
-        "Most online stores are still invisible to AI. We help your products become visible, cited, and ready for AI-driven recommendations before your competitors catch up.",
+        "Most online stores are still invisible to AI. We help your products become visible, cited, and ready for AI-driven purchases before your competitors catch up.",
       panelTitle: "Your AI audit shows",
       panelMeta: "Signal scan",
       checks: [
@@ -50,6 +50,17 @@ export const content = {
       { label: "AI Surfaces", text: "ChatGPT, Perplexity, Gemini, Claude, and others" },
       { label: "What You Get", text: "Visibility gaps, trust signals, priority fixes" },
     ],
+    about: {
+      kicker: "Why Us",
+      title: "We built AskUCP, a Shopify-scale AI product search layer.",
+      text:
+        "AskUCP was built on UCP, an open standard for AI-driven commerce. We used it to power search across millions of Shopify products. That operating experience shapes how we assess AI visibility, product data, and purchase readiness.",
+      points: [
+        "First product built on UCP",
+        "Worked directly with the protocol",
+        "Powered search across millions of Shopify products",
+      ],
+    },
     failures: [
       {
         icon: ShieldAlert,
@@ -313,7 +324,7 @@ export const content = {
     hero: {
       title: "Tee oma veebileht|AI jaoks|nähtavaks",
       subhead:
-        "Enamik e‑poode on AI jaoks endiselt nähtamatud. Aitame muuta sinu tooted AI jaoks nähtavaks, usaldusväärseks ja soovitamiseks valmis enne, kui konkurendid järele jõuavad.",
+        "Enamik e‑poode on AI jaoks endiselt nähtamatud. Aitame muuta sinu tooted AI jaoks nähtavaks, usaldusväärseks ja AI-juhitud ostudeks valmis enne, kui konkurendid järele jõuavad.",
       panelTitle: "See audit näitab",
       panelMeta: "Signaalide skaneering",
       checks: [
@@ -328,6 +339,17 @@ export const content = {
       { label: "AI kanalid", text: "ChatGPT, Perplexity, Gemini, Claude ja teised" },
       { label: "Tulemus", text: "Nähtavuse lüngad, usaldussignaalid, prioriteetsed parandused" },
     ],
+    about: {
+      kicker: "Miks meie",
+      title: "Ehitasime AskUCP, Shopify mõõtu AI-tooteotsingu kihi.",
+      text:
+        "AskUCP ehitasime UCP peale, mis on avatud standard AI-juhitud kaubanduse jaoks. Kasutasime seda otsingu loomiseks miljonite Shopify toodete vahel. See praktiline kogemus suunab ka meie auditit: hindame AI nähtavust, tooteandmeid ja ostuvalmidust.",
+      points: [
+        "Esimene UCP peale ehitatud toode",
+        "Töötasime protokolliga otse",
+        "Lõime otsingu miljonite Shopify toodete vahel",
+      ],
+    },
     failures: [
       {
         icon: ShieldAlert,

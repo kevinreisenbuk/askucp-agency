@@ -14,7 +14,6 @@ export function Footer({ lang }: { lang: Lang }) {
         <p>{copy.footer.tagline}</p>
       </div>
       <nav aria-label="Footer navigation">
-        <a href={`${localizedPath("home", lang)}#solution`}>{copy.nav.solution}</a>
         <a href={localizedPath("privacy", lang)}>{copy.footer.privacy}</a>
         <a href={localizedPath("terms", lang)}>{copy.footer.terms}</a>
       </nav>
