@@ -324,28 +324,28 @@ export const content = {
     hero: {
       title: "Tee oma veebileht|AI jaoks|nähtavaks",
       subhead:
-        "Enamik e‑poode on AI jaoks endiselt nähtamatud. Aitame muuta sinu tooted AI jaoks nähtavaks, usaldusväärseks ja AI-juhitud ostudeks valmis enne, kui konkurendid järele jõuavad.",
+        "Enamik e‑poode on AI jaoks endiselt nähtamatud. Aitame muuta sinu tooted AI jaoks leitavaks, usaldusväärseks ja ostetavaks enne, kui konkurendid järele jõuavad.",
       panelTitle: "See audit näitab",
       panelMeta: "Signaalide skaneering",
       checks: [
         "Kas AI leiab su tooted üles?",
-        "Konkreetsed pimedad kohad AI-otsingus",
+        "Konkreetsed kitsaskohad AI-otsingus",
         "Selge tegevusplaan nähtavuse kasvatamiseks",
       ],
       panelCta: "Taotle AI auditit",
     },
     trustSignals: [
-      { label: "Platvormid", text: "Shopify, WooCommerce, WordPress ja kohandatud veebilehed" },
+      { label: "Platvormid", text: "Shopify, WooCommerce, WordPress ja erilahendused" },
       { label: "AI kanalid", text: "ChatGPT, Perplexity, Gemini, Claude ja teised" },
-      { label: "Tulemus", text: "Nähtavuse lüngad, usaldussignaalid, prioriteetsed parandused" },
+      { label: "Tulemus", text: "Nähtavuse lüngad, usaldussignaalid ja prioriteetsed parandused" },
     ],
     about: {
       kicker: "Miks meie",
-      title: "Ehitasime AskUCP, Shopify mõõtu AI-tooteotsingu kihi.",
+      title: "Ehitasime AskUCP - AI-tooteotsing miljonite Shopify toodete jaoks.",
       text:
-        "AskUCP ehitasime UCP peale, mis on avatud standard AI-juhitud kaubanduse jaoks. Kasutasime seda otsingu loomiseks miljonite Shopify toodete vahel. See praktiline kogemus suunab ka meie auditit: hindame AI nähtavust, tooteandmeid ja ostuvalmidust.",
+        "AskUCP ehitasime UCP peale, et AI saaks tooteid paremini mõista ja üles leida. Selle abil lõime otsingu miljonite Shopify toodete vahel. See praktiline kogemus suunab ka meie auditit: hindame AI nähtavust, tooteandmeid ja ostuvalmidust.",
       points: [
-        "Esimene UCP peale ehitatud toode",
+        "Esimene UCP-l põhinev toode",
         "Töötasime protokolliga otse",
         "Lõime otsingu miljonite Shopify toodete vahel",
       ],
@@ -388,7 +388,7 @@ export const content = {
       problemKicker: "Miks poed kaovad",
       problemTitle: "Sinu kataloog võib olemas olla, kuid AI-agent ei saa osta seda, millest ta aru ei saa.",
       solutionKicker: "Mida me teeme",
-      solutionTitle: "Muudame sinu poe selliseks, et AI saaks sellest aru, seda soovitada ja ostuni viia.",
+      solutionTitle: "Teeme sinu poe AI jaoks arusaadavaks ja soovitatavaks.",
       timelineKicker: "Ajajoon",
       timelineTitle: "Tegutseda tuleb praegu.",
       timelineText: "AI-otsing mõjutab toodete leidmist juba täna. Järgmisena liigub ostuprotsess üha rohkem AI-agentide kätte.",
