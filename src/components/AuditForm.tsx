@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle2, LockKeyhole } from "lucide-react";
+import { ArrowRight, LockKeyhole } from "lucide-react";
 import type { SiteCopy } from "../content/siteContent";
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
@@ -117,15 +117,15 @@ export function AuditForm({ copy }: { copy: SiteCopy }) {
         <h2>{copy.sections.auditTitle}</h2>
         <p>{copy.sections.auditText}</p>
         <div className="form-assurance">
-          <LockKeyhole size={18} />
+          <LockKeyhole size={14} />
           <span>{copy.sections.auditAssurance}</span>
         </div>
         <div className="audit-steps-card">
           <div className="audit-steps-title">{copy.sections.auditListTitle}</div>
           <ul className="audit-steps">
-            {copy.auditSteps.map((item) => (
+            {copy.auditSteps.map((item, index) => (
               <li key={item}>
-                <CheckCircle2 size={18} />
+                <span className="audit-step-num">0{index + 1}</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -201,7 +201,7 @@ export function AuditForm({ copy }: { copy: SiteCopy }) {
         </label>
         <button className="primary-button form-button" type="submit">
           {copy.form.submit}
-          <ArrowRight size={20} />
+          <ArrowRight size={14} />
         </button>
         {formStatus && <p className="form-status">{formStatus}</p>}
         <p className="privacy-note">{copy.form.privacy}</p>

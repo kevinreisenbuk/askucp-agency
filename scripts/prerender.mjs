@@ -11,8 +11,8 @@ const pages = [
       <main>
         <header><p>AskUCP Agency</p></header>
         <section>
-          <h1>Make Your Store Agent-Ready.</h1>
-          <p>Most online stores are still invisible to AI. AskUCP Agency helps ecommerce stores improve AI search visibility with GEO, llms.txt, schema, UCP, ACP, and agentic commerce readiness consulting.</p>
+          <h1>Built on UCP. Tested on millions of products. Pointed at yours.</h1>
+          <p>AskUCP Agency built AskUCP, the first product on UCP, and ran AI search across millions of Shopify products with our in-house toolkit. The same toolkit reads your store and reports exactly where AI agents stop, slip, or skip.</p>
         </section>
         <section>
           <h2>What the audit covers</h2>
@@ -89,8 +89,8 @@ const pages = [
       <main>
         <header><p>AskUCP Agency</p></header>
         <section>
-          <h1>Tee oma veebileht AI jaoks nähtavaks</h1>
-          <p>Enamik e-poode on AI jaoks endiselt nähtamatud. AskUCP Agency aitab e-poodidel parandada AI-otsingu nähtavust GEO, skeemi, llms.txt ning agentse kaubanduse valmisoleku kaudu.</p>
+          <h1>Tehtud UCP-le. Testitud miljonite toodete peal. Suunatud sinu poele.</h1>
+          <p>AskUCP Agency ehitas AskUCP, esimese UCP-l põhineva toote, ja kasutas oma in-house tööriistakomplekti, et viia AI-otsing miljonite Shopify toodete juurde. Sama tööriistakomplekt loeb sinu poodi ja näitab täpselt, kus AI-agent peatub, libastub või jätab vahele.</p>
         </section>
         <section>
           <h2>Mida audit katab</h2>
